@@ -1,0 +1,21 @@
+<!-- app/views/posts/show.html.erb -->
+<div class="container">
+  <h1><%= @post.title %></h1>
+  <p>Posted by: <%= @post.user.nickname %></p>
+  <p><%= @post.content %></p>
+ <%# link_to "Create a comment", new_post_comment_path(@post.id), class: "btn btn-primary" %>
+
+
+ <!-- Afficher les commentaires existants -->
+  <h2>Comments</h2>
+  <% @comments.each do |comment| %>
+    <div class="comment">
+      <p><strong><%= comment.user.nickname %>:</strong> <%= comment.content %></p>
+    </div>
+  <% end %>
+</div>
+
+  <!-- Formulaire de création de commentaire -->
+  <%# render 'comments/form', post: @post, comment: @comment %>
+  <%= render 'shared/comment_form_new'%>
+</div>
