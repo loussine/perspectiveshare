@@ -1,5 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
 
-<p>En tant qu'utilisateur, je peux accéder à la page d'accueil.</p>
-<p>La page d'accueil doit contenir un lien permettant d'accéder à la liste des publications.</p>
+<div class="container">
+  <h1>Welcome to PerspectiveShare</h1>
+  <p>Sharing Visions, Shaping Perspectives.</p>
+
+  <p>Welcome to our platform dedicated to the exchange of information and ideas through shared articles!</p>
+  <p>We invite you to explore our articles and participate in the discussion by leaving your comments and reflections. Your contribution is invaluable in enriching conversations and broadening our collective understanding of the topics at hand.</p>
+  <p>We would like to remind all our users of the importance of respect and courtesy in our exchanges. We encourage constructive and respectful discussions where everyone can express their opinions openly and kindly towards other members of our community.
+  <p>Thank you for being part of our community!</p>
+
+  <p  class="text-danger">La page d'accueil doit contenir un lien permettant d'accéder à la liste des publications.</p>
+
+  <%= link_to "GET STARTED", posts_path, class: "btn btn-primary" %>
+</div>
