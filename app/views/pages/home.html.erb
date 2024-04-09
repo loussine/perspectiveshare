@@ -1,14 +1,20 @@
 
-<div class="container">
-  <h1>Welcome to PerspectiveShare</h1>
-  <p>Sharing Visions, Shaping Perspectives.</p>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1689421755150-9c3b8dc3a45b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
+  <div class="container">
+    <h1><strong>Welcome</strong> to <strong>PerspectiveShare</strong>!</h1>
+    <p>Sharing Visions, Shaping Perspectives.</p>
+    <%= link_to "GET STARTED", posts_path, class: "btn btn-gradient" %>
+   </div>
+</div>
 
-  <p>Welcome to our platform dedicated to the exchange of information and ideas through shared articles!</p>
-  <p>We invite you to explore our articles and participate in the discussion by leaving your comments and reflections. Your contribution is invaluable in enriching conversations and broadening our collective understanding of the topics at hand.</p>
-  <p>We would like to remind all our users of the importance of respect and courtesy in our exchanges. We encourage constructive and respectful discussions where everyone can express their opinions openly and kindly towards other members of our community.
-  <p>Thank you for being part of our community!</p>
 
-  <p  class="text-danger">La page d'accueil doit contenir un lien permettant d'accéder à la liste des publications.</p>
+<div class="mb-5"></div>
+<div class="container p-50">
 
-  <%= link_to "GET STARTED", posts_path, class: "btn btn-primary" %>
+    <p>Welcome to our platform dedicated to the exchange of information and ideas through shared articles!</p>
+    <p>We invite you to explore our articles and participate in the discussion by leaving your comments and reflections. Your contribution is invaluable in enriching conversations and broadening our collective understanding of the topics at hand.</p>
+    <p>We would like to remind all our users of the importance of respect and courtesy in our exchanges. We encourage constructive and respectful discussions where everyone can express their opinions openly and kindly towards other members of our community.
+    <p>Thank you for being part of our community!</p>
+
+
 </div>
