@@ -1,13 +1,20 @@
-<div class="container">
-  <h1>Explore our posts</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1689421755150-9c3b8dc3a45b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
 
-  <% @posts.each do |post| %>
-    <div class="bg-white p-10 m-50">
-      <p>Posted by: <%= post.user.nickname %></p>
-      <p></p><%= post.title %></p>
-      <p><%= truncate(post.content, length: 450) %>...</p>
-      <%= link_to "Read more", post_path(post.id), class: "btn btn-primary" %>
-    </div>
-  <% end %>
 
+  <div class="container">
+    <h1 class="color-font-white">Explore our posts</h1>
+
+    <% @posts.each do |post| %>
+      <div class="card-index-post">
+
+        <h2></p><%= post.title %></h2>
+        <p style="font-style: italic;">Posted by: <%= post.user.nickname %></p>
+        <p><%= truncate(post.content, length: 450) %>...</p>
+
+        <%= link_to "Read more", post_path(post.id), class: "btn btn-gradient" %>
+
+      </div>
+    <% end %>
+
+  </div>
 </div>

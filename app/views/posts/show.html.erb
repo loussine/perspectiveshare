@@ -1,21 +1,31 @@
-<!-- app/views/posts/show.html.erb -->
-<div class="container">
-  <h1><%= @post.title %></h1>
-  <p>Posted by: <%= @post.user.nickname %></p>
-  <p><%= @post.content %></p>
- <%# link_to "Create a comment", new_post_comment_path(@post.id), class: "btn btn-primary" %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1689421755150-9c3b8dc3a45b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);">
 
-
- <!-- Afficher les commentaires existants -->
-  <h2>Comments</h2>
-  <% @comments.each do |comment| %>
-    <div class="comment">
-      <p><strong><%= comment.user.nickname %>:</strong> <%= comment.content %></p>
+  <!-- app/views/posts/show.html.erb -->
+  <div class="container">
+    <div class="card-index-post">
+      <h1><%= @post.title %></h1>
+      <p style="font-style: italic;">Posted by: <%= @post.user.nickname %></p>
+      <p><%= @post.content %></p>
+      <p style="font-style: italic;">Url: <a href="<%= @post.url %>"><%= @post.url %></a></p>
     </div>
-  <% end %>
-</div>
 
-  <!-- Formulaire de création de commentaire -->
-  <%# render 'comments/form', post: @post, comment: @comment %>
-  <%= render 'shared/comment_form_new'%>
+
+    <% if @comments.any? %>
+      <!-- Afficher les commentaires existants -->
+      <div class="card-index-post">
+        <h1>Comments</h1> <%# ATTENTION - besoin si comment = faire un if%>
+        <% @comments.each do |comment| %>
+          <div class="comment">
+            <p><strong><%= comment.user.nickname %>:</strong> <%= comment.content %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+    <!-- Formulaire de création de commentaire -->
+    <%# render 'comments/form', post: @post, comment: @comment %>
+    <%= render 'shared/comment_form_new'%>
+  </div>
+
 </div>

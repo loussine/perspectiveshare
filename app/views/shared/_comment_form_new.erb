@@ -1,12 +1,15 @@
 
 <!-- app/views/comments/new.html.erb -->
 <div class="container">
-  <h1>Create a new comment</h1>
+  <div class="card-index-post">
 
-  <%= simple_form_for([@post, @comment], url: post_comments_path(@post)) do |form| %>
-    <%# form.input :content, label: "Content" %>
-    <%= form.text_area :content, label: "Content", class: "form-control", rows: 5 %>
-    <%= form.button :submit, "Create comment", class: "btn btn-primary" %>
-  <% end %>
+    <h1>Create a new comment</h1>
 
+    <%= simple_form_for([@post, @comment], url: post_comments_path(@post)) do |form| %>
+      <%# form.input :content, label: "Content" %>
+      <%= form.text_area :content, label: "Content", class: "form-control light-gray-background margin-text-area", rows: 5 %>
+      <%= form.button :submit, "Create", class: "btn btn-gradient" %>
+    <% end %>
+
+  </div>
 </div>
